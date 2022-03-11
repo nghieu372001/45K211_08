@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    width: auto;
+    height: 130px;
+    background-color: #056839;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+#header .logo-header{
+    width: auto;
+    height: 80px;
+    text-align: center;
+
+}
+
+#header .nav-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+#header .nav-items li{
+    display:inline-block;
+    padding: 0 50px;
+    border-right: 2px solid black;
+}
+
+#header .nav-items li:first-child{
+    border-left: 2px solid black;
+}
+
+#header .nav-items li a{
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration:none;
+    color:yellow;
+}
+#image-header{
+    width: 100%;
+    margin-bottom:20px;
+}
+
+#content-top{
+    padding: 40px 0px 40px 0px;
+    background: url(../assets/image/bg-gioithieu.png);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px 20px;
+}
+
+#content-top .image-content{
+    margin: 0 30px;
+    flex:1;
+}
+
+#content-top .content{
+    flex: 3;
+    margin-right: 30px;
+}
+
+#content-top .TieuDe{
+    color: #056839;
+    font-size: 36px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+}
+
+#content-top .Slogan{
+    color: #056839;
+    font-size: 30px;
+    font-family: fr;
+    text-align: center;
+    margin-bottom: 10px;
+} 
+
+#content-top .content p{
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+#content-midle{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.img-content-midle{
+    width: 500px;
+    height: 900px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.content-midle-text{
+    flex: 1;
+    margin:0 20px;
+    background: url(../assets/image/bg-gioithieu.png);
+}
+
+.content-midle-text h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color:red;
+    margin-top: 20px;
+}
+
+.content-midle-text p{
+    margin: 0 30px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.Underline{
+    margin-top: 20px;
+    width: 50%;
+    height: 1.5px;
+    margin-left: 425px;
+    text-align: center;
+    background-color: black;
+}
+#Gallery{
+    text-align: center;
+}
+
+#Gallery .Gallery-text{
+    text-align: center;
+    color: red;
+    margin: 20px 0;
+}
+
+
+#Gallery .Gallery-img{
+    width:100%;
+    height: auto;
+    margin:10px 0;
+}
+
+#contact{
+    margin: 20px 0;
+    
+}
+
+#contact .icon-contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#contact .contact-text{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#contact .icon{
+    height: 50px;
+    width: 50px;
+}
