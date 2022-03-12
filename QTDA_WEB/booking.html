@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\booking.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <p class="logo-header"><img src="./assets/image/logo.png" alt=""></p>
+
+        <ul class="nav-items">
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="">Chỉnh sửa lịch đặt</a></li>
+            <li><a href="">Theo dõi lịch đặt</a></li>
+        </ul>
+    </div>
+
+    <div class="item text-center">
+        <div class="icon">
+          <a href="dat ban" target>
+             <img src="assets\image\đatban.png" alt="Đặt bàn">
+          </a>  
+          <a href="ship" target>
+             <img src="assets\image\ship.png" alt="Đặt ship">
+          </a> 
+          <a href="an tai gia" target>
+             <img src="assets\image\antaigia.png" alt="Đặt món">
+          </a>
+        </div>
+    </div >    
+
+    <div class="breadcrumb-small">
+        <a href="/" title="Quay trở lại trang chủ">Trang chủ</a>
+        <span aria-hidden="true">/</span>
+    </div>
+  
+  
+    <section id="home-services" class="orther-service">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="grid-uniform md-mg-left-10">
+                       
+                    
+                    
+            <div class="grid__item wow fadeInUp md-pd-left10 large--one-third medium--one-half small--one-whole"
+                        data-wow-delay="0.2s"
+                        data-wow-duration="0.75s">
+                <div class="hservice-item text-center">
+                    <div class="hservice-img">
+                    <a href="/pages/dat-ban" target="">
+                        <img src="assets\image\đatban.png" alt="Đặt bàn" />
+                        </a>
+                    </div>
+                    <div class="hservice-title">
+                        <a href="/pages/dat-ban">Đặt bàn</a> 
+                    </div>
+                
+                </div>
+            </div>
+                                                       
+                    
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <div id="PageContainer" class="">
+        <main class="main-content" role="main">
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<section id="page-wrapper" class="page_datban">
+<div class="wrapper">
+    <div class="inner">
+        <div class="grid">
+
+            <div class="grid__item large--one-whole">
+                <div class="text-center">
+                    <h1>Đặt bàn</h1>
+                </div>
+                <div class="form-vertical grid clearfix">
+                    <form accept-charset='UTF-8' action='/contact' class='contact-form' method='post'>
+<input name='form_type' type='hidden' value='contact'>
+<input name='utf8' type='hidden' value='✓'>
+
+
+                    
+                    
+
+                    
+
+                    
+                    <div class="grid__item large--one-whole medium--one-whole small--one-whole">
+                        <input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="Họ tên của bạn *" autocapitalize="words" value="">
+                    </div>
+                    <div class="grid__item large--three-quarters medium--one-whole small--one-whole">
+                        <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="Địa chỉ email của bạn" autocorrect="off" autocapitalize="off" value="">
+                    </div>
+                    
+                    <div class="grid__item large--one-quarter medium--one-whole small--one-whole">
+                        <input type="tel" id="ContactFormPhone" class="input-full" name="contact[phone]" placeholder="Số điện thoại của bạn *" pattern="[0-9\-]*" value="">
+                    </div>
+                    <div class="grid__item large--one-half medium--one-whole small--one-whole">
+                        <input type="text" id="ContactFormQuantity" class="input-full" name="contact[quantity]" placeholder="Số lượng khách *" >
+                    </div>
+                    <div class="grid__item large--one-half medium--one-whole small--one-whole">
+                        <select id="ContactFormCoso">
+                            <option value="0">Chọn cơ sở *</option>
+                            
+                            
+
+                            
+                            <option value="CS1: Số 2 ngõ 69 Chùa Láng">CS1: 232 Phan Đình Phùng</option>
+                            
+                            <option value="CS2: Số 13 Mai Hắc Đế">CS2: </option>
+                            
+                            
+                        </select>
+                    </div>
+                    <div class="grid__item large--one-half medium--one-whole small--one-whole">
+                        <input type="text" id="ContactFormDate" class="input-full" name="contact[date]" placeholder="Chọn ngày *" autocapitalize="off" autocorrect="off">
+                    </div>
+                    <div class="grid__item large--one-half medium--one-whole small--one-whole">
+
+                        <select id="ContactFormTime">
+                            <option value="0">Chọn giờ *</option>
+                            
+                            
+                            <option value="10h30">08h00</option>
+
+                            <option value="10h30">08h30</option>
+
+                            <option value="10h30">09h00</option>
+
+                            <option value="10h30">09h30</option>
+
+                            <option value="10h30">10h00</option>
+                            
+                            <option value="10h30">10h30</option>
+                            
+                            <option value="11h00">11h00</option>
+                            
+                            <option value="11h30">11h30</option>
+                            
+                            <option value="12h00">12h00</option>
+                            
+                            <option value="12h30">12h30</option>
+                            
+                            <option value="13h00">13h00</option>
+                            
+                            <option value="13h30">13h30</option>
+                            
+                            <option value="17h30">17h30</option>
+                            
+                            <option value="18h00">18h00</option>
+                            
+                            <option value="18h30">18h30</option>
+                            
+                            <option value="19h00">19h00</option>
+                            
+                            <option value="19h30">19h30</option>
+                            
+                            <option value="20h00">20h00</option>
+                            
+                            <option value="20h30">20h30</option>
+                            
+                            <option value="21h00">21h00</option>
+                            
+                        </select>
+                    </div>
+                    <div class="grid__item large--one-whole medium--one-whole small--one-whole">
+                        <label for="ContactFormMessage" class="hidden-label">Nội dung</label>
+                        <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="Nội dung *"></textarea>
+                    </div>
+                    <div class="grid__item large--one-half medium--one-whole small--one-whole">
+                        <a href="javascript:void(0)" class="btnSubmitDatban" >Đặt bàn</a>
+                    </div>
+                    
+<input id='745c8a13316149f090d4b6468af59774' name='g-recaptcha-response' type='hidden'><script src='https://www.google.com/recaptcha/api.js?render=6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-'></script><script>grecaptcha.ready(function() {grecaptcha.execute('6LdD18MUAAAAAHqKl3Avv8W-tREL6LangePxQLM-', {action: 'submit'}).then(function(token) {document.getElementById('745c8a13316149f090d4b6468af59774').value = token;});});</script></form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+
+<hr class="Underline"> 
+
+    <div id="contact">
+        <p class="contact-text">CONTACT</p>
+        <div class="icon-contact">
+        
+            <div class="icon-telephone">
+                <a href=""><img class="icon" src="./assets/image/icon-phone.jpg" alt=""></a>
+                <h2>HOTLINE</h2>
+                <h2>0902 988 232</h2>
+            </div>
+
+            <div class="icon-address">
+                <a href=""><img class="icon" src="./assets/image/icon-address.jpg" alt=""></a>
+                <h2>ADDRESS</h2>
+                <h2>232 Phan Đình Phùng</h2>
+            </div>
+
+            <div class="icon-facebook">
+                <a href="https://www.google.com/"><img class="icon" src="./assets/image/icon-fb.png"></a>
+                <h2>FACEBOOK</h2>
+                <h2>Ếch Xanh Quãng Ngãi</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
