@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/booking.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <p class="logo-header"><img src="/image/logo.png" alt=""></p>
+
+        <ul class="nav-items">
+            <li><a href="http://localhost:3000/home">Trang Chủ</a></li>
+            <li><a href="http://localhost:3000/menu">Menu</a></li>
+            <li><a href="http://localhost:3000/booking">Booking</a></li>
+            <li><a href="http://localhost:3000/monitor">Theo dõi lịch đặt</a></li>
+            <li><a href="http://localhost:3000/Admin">Quản Lý</a></li>
+        </ul>
+    </div>
+
+        <div class="Title">
+            <h2>CHỈNH SỬA ĐƠN ĐẶT BÀN ĐƠN ĐẶT BÀN</h2>
+        </div>
+        <form action="/updateOrder" method="post">
+            <div class="grid__item w-85">
+                <input type="text" id="ContactFormName" class="input-full" name="HoTen" placeholder="Họ tên của bạn *" autocapitalize="words" value="<%= dataOrder.HoTen %>">
+            </div>
+        
+            <div class="grid__item w-40">
+                <input type="email" id="ContactFormEmail" class="input-full" name="Email" placeholder="Địa chỉ email của bạn" autocorrect="off" autocapitalize="off" value="<%= dataOrder.Email %>">
+            </div>
+        
+            <div class="grid__item w-40 ">
+                <input type="tel" id="ContactFormPhone" class="input-full" name="SoDienThoai" placeholder="Số điện thoại của bạn *" pattern="[0-9\-]*" value="<%= dataOrder.SoDienThoai %>">
+            </div>
+        
+            <div class="grid__item w-40">
+                <input type="text" id="ContactFormQuantity" class="input-full" name="SoLuong" placeholder="Số lượng khách *" value="<%= dataOrder.SoLuong %>" >
+            </div>
+        
+            <div class="grid__item w-40 ">
+                <select id="ContactFormCoso" name="ChonViTri">
+                    <option>Chọn Bàn *</option>
+                    <option selected hidden><%= dataOrder.ChonViTri %></option>
+                    <option name="ChonViTri"  value="Bàn 1">Bàn 1</option>
+                    <option name="ChonViTri"  value="Bàn 2">Bàn 2</option>
+                    <option name="ChonViTri"  value="Bàn 3">Bàn 3</option>
+                    <option name="ChonViTri"  value="Bàn 4">Bàn 4</option>
+                    <option name="ChonViTri"  value="Bàn 5">Bàn 5</option>
+                    <option name="ChonViTri"  value="Bàn 6">Bàn 6</option>
+                    <option name="ChonViTri"  value="Bàn 7">Bàn 7</option>
+                    <option name="ChonViTri"  value="Bàn 8">Bàn 8</option>
+                    <option name="ChonViTri"  value="Bàn 9">Bàn 9</option>
+                    <option name="ChonViTri"  value="Bàn 10">Bàn 10</option>
+                    <option name="ChonViTri"  value="Bàn 11">Bàn 11</option>
+                    <option name="ChonViTri"  value="Bàn 12">Bàn 12</option>
+                    <option name="ChonViTri"  value="Bàn 13">Bàn 13</option>
+                    <option name="ChonViTri"  value="Bàn 14">Bàn 14</option>
+                    <option name="ChonViTri"  value="Bàn 15">Bàn 15</option>
+                    <option name="ChonViTri"  value="Bàn 16">Bàn 16</option>
+                    <option name="ChonViTri"  value="Bàn 17">Bàn 17</option>
+                    <option name="ChonViTri"  value="Bàn 18">Bàn 18</option>
+                    <option name="ChonViTri"  value="Bàn 19">Bàn 19</option>
+                    <option name="ChonViTri"  value="Bàn 20">Bàn 10</option>
+                    <option name="ChonViTri"  value="Bàn 21">Bàn 21</option>
+                    <option name="ChonViTri"  value="Bàn 22">Bàn 22</option>
+                    <option name="ChonViTri"  value="Bàn 23">Bàn 23</option>
+                </select>
+            </div>
+        
+            <div class="grid__item w-40">
+                <input type="date" value="<%= dataOrder.Ngay %>" id="ContactFormDate" class="input-full" name="Ngay" autocapitalize="off" autocorrect="off" required>
+            </div>
+            <div class="grid__item w-40 ">
+                <select id="ContactFormTime" name="Gio">
+                    <option value="0">Chọn giờ *</option>
+                    <option selected hidden><%= dataOrder.Gio %></option>
+                    <option name="time" value="08h00">08:00</option>
+                    <option name="time" value="08h30">08h30</option>
+                    <option name="time" value="09h00">09h00</option>
+                    <option name="time" value="09h30">09h30</option>
+                    <option name="time" value="10h00">10h00</option>          
+                    <option name="time" value="10h30">10h30</option>            
+                    <option name="time" value="11h00">11h00</option>            
+                    <option name="time" value="11h30">11h30</option>          
+                    <option name="time" value="12h00">12h00</option>          
+                    <option name="time" value="12h30">12h30</option>          
+                    <option name="time" value="13h00">13h00</option>          
+                    <option name="time" value="13h30">13h30</option>          
+                    <option name="time" value="17h30">17h30</option>        
+                    <option name="time" value="18h00">18h00</option>          
+                    <option name="time" value="18h30">18h30</option>          
+                    <option name="time" value="19h00">19h00</option>            
+                    <option name="time" value="19h30">19h30</option>          
+                    <option name="time" value="20h00">20h00</option>                      
+                    <option name="time" value="20h30">20h30</option>            
+                    <option name="time" value="21h00">21h00</option>
+                </select>
+            </div>
+    
+            <div class="grid__item ">
+                <textarea rows="10" id="ContactFormMessage" class="input-full" name="NoiDung"  placeholder="Món ăn-Số lượng(Nếu không đặt món trước quý khách hãy nhập không) *"><%= dataOrder.NoiDung %></textarea>
+            </div>
+            
+            <input type="text" value="<%= dataOrder.ID %>" name="ID" hidden >
+
+            <div class="grid__item large--one-half medium--one-whole small--one-whole" style="margin-left: 100px;">
+                <button type="submit">Chỉnh Sửa</button>
+            </div>
+        </form>
+</body>
+</html>

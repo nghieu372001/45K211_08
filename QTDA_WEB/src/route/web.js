@@ -6,13 +6,18 @@ let router=express.Router();
 
 const initWebRoute=(app)=>{
 
+        router.get('/monitor', homeController.getHomepage); // Hiển thị ô tìm kiếm theo số điện thoại
+
         router.get('/booking', (req,res)=>{
             res.render('booking.ejs');     // chạy ra cái file booking.ejs
         })
 
         router.post('/addOrder',homeController.createNewOrder); // Thêm order
 
-
+        router.post('/deleteOrder',homeController.deleteOrder);
+        router.get('/editOrder/:idOrder',homeController.editOrder);
+        router.post('/updateOrder',homeController.updateOrder);
+        router.post('/searchOrder',homeController.searchOrder);
 
         return app.use('/',router);
 }

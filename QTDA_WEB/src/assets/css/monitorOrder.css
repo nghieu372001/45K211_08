@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+#header{
+  width: auto;
+  height: 130px;
+  background-color: #056839;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+#header .logo-header{
+  width: auto;
+  height: 80px;
+  text-align: center;
+
+}
+
+#header .nav-items{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  
+}
+
+#header .nav-items li{
+  display:inline-block;
+  padding: 0 50px;
+  border-right: 2px solid black;
+}
+
+#header .nav-items li:first-child{
+  border-left: 2px solid black;
+}
+
+#header .nav-items li a{
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration:none;
+  color:yellow;
+}
+
+.body{
+  height: 200px;
+  width: 50%;
+  background-color: rgba(201, 114, 114, 0.144);
+  margin-left: 400px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  border: solid;
+}
+
+.Underline{
+  margin-top: 20px;
+  width: 50%;
+  height: 1.5px;
+  margin-left: 405px;
+  text-align: center;
+  background-color: black;
+}
+
+#contact{
+  margin: 20px 0;
+  
+}
+
+#contact .icon-contact{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  text-align: center;
+  margin-left: 70px;
+}
+
+#contact .contact-text{
+  color: red;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 670px;
+}
+
+#contact .icon{
+  height: 50px;
+  width: 50px;
+}

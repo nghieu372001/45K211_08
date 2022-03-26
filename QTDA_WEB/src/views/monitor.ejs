@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/monitorOrder.css">
+    <title>Tra Cứu</title>
+</head>
+<body>
+    <div id="header">
+        <p class="logo-header"><img src="/image/logo.png" alt=""></p>
+        <ul class="nav-items">
+            <li><a href="http://localhost:3000/home">Trang Chủ</a></li>
+            <li><a href="http://localhost:3000/menu">Menu</a></li>
+            <li><a href="http://localhost:3000/booking">Booking</a></li>
+            <li><a href="http://localhost:3000/monitor">Theo dõi lịch đặt</a></li>
+            <li><a href="http://localhost:3000/Admin">Quản Lý</a></li>
+        </ul>
+    </div>
+
+    <div class="body">
+        <div style="margin-top: 10px; margin-left: 70px;">
+            <h1 style="margin-bottom:20px;">Tra Cứu Lịch Sử Đặt Bàn</h1>
+            <form action="/searchOrder"  method="POST">
+                <div><input style="width: 80%; height: 40px;margin-bottom: 20px;" placeholder="Nhập Số Điện Thoại" type="text" name="SoDienThoaiTK"></div>
+                <button style="margin-left: 500px;" type="submit">Tìm Kiếm</button>
+            </form>
+        </div>
+    </div>
+
+    <hr class="Underline"> 
+
+    <div id="contact">
+        <p class="contact-text">CONTACT</p>
+        <div class="icon-contact">
+        
+            <div class="icon-telephone">
+                <a href=""><img class="icon" src="/image/icon-phone.jpg" alt=""></a>
+                <h2>HOTLINE</h2>
+                <h2>0902 988 232</h2>
+            </div>
+
+            <div class="icon-address">
+                <a href=""><img class="icon" src="/image/icon-address.jpg" alt=""></a>
+                <h2>ADDRESS</h2>
+                <h2>232 Phan Đình Phùng</h2>
+            </div>
+
+            <div class="icon-facebook">
+                <a href="https://www.google.com/"><img class="icon" src="/image/icon-fb.png"></a>
+                <h2>FACEBOOK</h2>
+                <h2>Ếch Xanh Quãng Ngãi</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
