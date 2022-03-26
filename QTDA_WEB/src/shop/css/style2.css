@@ -1,0 +1,227 @@
+/*==================*/
+/*= RESET CSS ======*/
+/*==================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, /*tbody, tfoot, thead, tr, th, td,*/
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+
+/*==================*/
+/*= SHOP CSS  ======*/
+/*==================*/
+
+/*===== HEADER =====*/
+
+.page-header {
+	background: green;
+	height: 120px;
+	width: 100%;
+}
+
+.page-header .wrapper {
+	width: 95%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.page-header .logo {
+	margin-left: 560px;
+	margin-bottom: 50px;
+}
+
+.page-header .main-nav {
+	float: left;
+	
+}
+
+.main-nav ul li {
+	float: left;
+	margin-right: 110px;
+}
+
+.main-nav ul li a {
+	color: yellow;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+	color: grey;
+}
+
+.fix {
+	clear: both;
+}
+
+/*===== MAIN =====*/
+
+.page-main {
+	height: 1000px;
+	width: 100%;
+}
+
+.page-main .main-function {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #F0E68C;
+	float: left;
+}
+
+.function {
+	background: white;
+	color: black;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: 1px solid orange;
+	border-radius: 8px;	
+	font-size: 20px;
+	transition: all 0.5s ease;
+}
+
+.function:hover {
+	background: #fff;
+	color: #c00;	
+	border: none;
+}
+
+.page-main .main-function a {
+	margin-top: 50px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.page-main .main-function .f1::after {
+	content: 'Trang chủ';
+	padding-left: 20px;
+}
+
+.page-main .main-function .f2::after {
+	content: 'Xử lý đơn đặt bàn online';
+	padding-left: 20px;
+}
+
+.page-main .main-function .f3::after {
+	content: 'Xem thông tin lịch đặt bàn';
+	padding-left: 20px;
+}
+
+.page-main .main-function .f4::after {
+	content: 'Chỉnh sửa món ăn';
+	padding-left: 20px;
+}
+
+.page-main .main-info {
+	width: 80%;
+	height: 100%;
+	background: #90EE90;
+	margin-left: 270px;
+}
+
+.page-main .main-info .text1 {
+	font-size: 30px;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+.page-main .main-info .ff {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 350px;
+}
+
+.page-main .main-info .ff *{
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+
+.page-main .main-info .table {
+	width: 100%;
+	height: 65%;
+	margin-left: 120px;
+}
+
+
+
+
+
+
+
+.page-main .main-info .text {
+	font-size: 30px;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.page-main .main-info .contact div{
+	float: left;
+	margin-left: 165px;
+	margin-top: 40px;
+}
+
+.page-main .main-info .contact div a{
+	font-size: 24px;
+	color: black;
+}
+
+.page-main .main-info .contact div p{
+	font-size: 24px;
+	color: black;
+	font-weight: bold;
+	margin-top: 12px;
+}
+
+
+
+
+
+
