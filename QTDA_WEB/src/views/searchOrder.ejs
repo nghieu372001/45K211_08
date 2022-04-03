@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/searchOrder.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <p class="logo-header"><img src="/image/logo.png" alt=""></p>
+
+        <ul class="nav-items">
+            <li><a href="http://localhost:3000/home">Trang Chủ</a></li>
+            <li><a href="http://localhost:3000/menu">Menu</a></li>
+            <li><a href="http://localhost:3000/booking">Booking</a></li>
+            <li><a href="http://localhost:3000/monitor">Theo dõi lịch đặt</a></li>
+            <li><a href="http://localhost:3000/Admin">Quản Lý</a></li>
+        </ul>
+    </div>
+
+
+    <div class="titleList">
+        <h2>Danh Sách Đặt Bàn</h2>      
+    </div>
+
+      <div class="w3-container">
+        <table class="w3-table-all w3-hoverable">
+          <thead>
+            <tr class="w3-light-grey">
+              <th>IDOrder</th>
+              <th>Họ Tên</th>
+              <th>Email</th>
+              <th>Số Điện Thoại</th>
+              <th>Ngày Đặt</th>
+              <th>Giờ</th>
+              <th>Số Lượng</th>
+              <th>Vị Trí</th>
+              <th>Nội Dung</th>
+              <th>Trạng Thái</th>
+              <th>Chức Năng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i=0; i < dataSearch.length; i++) { %>
+                <tr>
+                  <td><%= dataSearch[i].ID %></td>
+                  <td><%= dataSearch[i].HoTen %></td>
+                  <td><%= dataSearch[i].Email %></td>
+                  <td><%= dataSearch[i].SoDienThoai %></td>
+                  <td><%= dataSearch[i].Ngay %></td>
+                  <td><%= dataSearch[i].Gio %></td>
+                  <td><%= dataSearch[i].SoLuong %></td>
+                  <td><%= dataSearch[i].ChonViTri %></td>
+                  <td><%= dataSearch[i].NoiDung %></td>
+                  <td><%= dataSearch[i].TrangThai %></td>
+                  <td>
+                    <div class="button">
+                      <form action="/deleteOrder" method="post">
+                        <input type="text" hidden value="<%= dataSearch[i].ID %> " name="orderID"/>
+                        <button type="submit">Xóa</button>
+                      </form>
+
+                      <form action="/editOrder/<%= dataSearch[i].ID %>" method="get">
+                        <button type="submit">Chỉnh Sửa</button>
+                      </form>
+                    </div>
+                    </td>
+                </tr>
+             <% } %>
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>

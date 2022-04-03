@@ -30,4 +30,8 @@ app.get('/menu', (req,res)=>{
     res.sendFile(__dirname+ '/menu.html');
 })
 
+app.get('/Admin', (req,res)=>{
+    res.sendFile(__dirname+ '/homeAdmin.html');
+})
+
 app.listen(port,()=> console.info(`Listening on port http://localhost:${port}/home`));
