@@ -16,9 +16,10 @@ let searchOrder=async(req,res) => {
     // console.log('check',req.body);
     // const [rows, fields] = await pool.execute('SELECT * FROM tableorder');
     // // return  res.render('searchOrder.ejs',{dataSearch:rows});
-        let {SoDienThoaiTK}=req.body;
-        const [rows] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
-        return  res.render('searchOrder.ejs',{dataSearch:rows});
+    let {SoDienThoaiTK}=req.body;
+    const [rows] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
+    return  res.render('searchOrder.ejs',{dataSearch:rows});
+
 }
 
 
@@ -61,8 +62,12 @@ let handerOrder = async (req,res)=>{
     return  res.render('handerOrder.ejs',{dataHander:rows_handerOrder})
 } 
 
-
+let AdminUpdateOrder=async (req,res) => {
+    let AdminUpdate=req.body.AdminUpdate;
+    await pool.execute('update tableorder set TrangThai=\'Đã Xác Nhận\' where ID = ? ',[AdminUpdate]);
+    return res.redirect('/handerOrder');
+}
 
 module.exports={
-    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,homeAdmin,handerOrder,AdmindeleteOrder
+    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,homeAdmin,handerOrder,AdmindeleteOrder,AdminUpdateOrder
 }

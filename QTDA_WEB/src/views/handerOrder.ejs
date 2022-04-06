@@ -25,42 +25,53 @@
         <div class="main-processing">
             <h2 class="text1">XỬ LÝ ĐƠN ĐẶT BÀN</h2>
             <div class="table" style="margin-top: 20px;">
-                <table style="margin-left: 350px;" width="50%" border="1" cellspacing="10" cellpadding="20" >
+                <table class="w3-table-all w3-hoverable">
                     <thead>
-                        <tr>
-                            <th>IDOrder</th>
-                            <th>Họ Tên</th>
-                            <th>Email</th>
-                            <th>Số Điện Thoại</th>
-                            <th>Ngày Đặt</th>
-                            <th>Giờ</th>
-                            <th>Số Lượng</th>
-                            <th>Vị Trí</th>
-                            <th>Nội Dung</th>
-                            <th>Trạng Thái</th>
-                        </tr>
+                      <tr class="w3-light-grey">
+                        <th>IDOrder</th>
+                        <th>Họ Tên</th>
+                        <th>Email</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Ngày Đặt</th>
+                        <th>Giờ</th>
+                        <th>Số Lượng</th>
+                        <th>Vị Trí</th>
+                        <th>Nội Dung</th>
+                        <th>Trạng Thái</th>
+                        <th>Chức Năng</th>
+                      </tr>
                     </thead>
-                    <tbody>
-                        <% for(let i=0; i < dataHander.length; i++) { %>
-                            <tr>
-                              <td><%= dataHander[i].ID %></td>
-                              <td><%= dataHander[i].HoTen %></td>
-                              <td><%= dataHander[i].Email %></td>
-                              <td><%= dataHander[i].SoDienThoai %></td>
-                              <td><%= dataHander[i].Ngay %></td>
-                              <td><%= dataHander[i].Gio %></td>
-                              <td><%= dataHander[i].SoLuong %></td>
-                              <td><%= dataHander[i].ChonViTri %></td>
-                              <td><%= dataHander[i].NoiDung %></td>
-                              <td><%= dataHander[i].TrangThai %></td>
-                            </tr>
-                         <% } %>
-                     </tbody>
-                </table>
-            </div>
-            <div class="btn-toolbar" style="margin-top: 10px;">
-                <button type="button" id="btnSubmit" class="btn btn-primary btn-sm">XÁC NHẬN</button>
-                <button type="button" id="btnCancel" class="btn btn-primary btn-sm">HỦY ĐƠN</button>
+                       <tbody>
+                      <% for(let i=0; i < dataHander.length; i++) { %>
+                          <tr>
+                            <td><%= dataHander[i].ID %></td>
+                            <td><%= dataHander[i].HoTen %></td>
+                            <td><%= dataHander[i].Email %></td>
+                            <td><%= dataHander[i].SoDienThoai %></td>
+                            <td><%= dataHander[i].Ngay %></td>
+                            <td><%= dataHander[i].Gio %></td>
+                            <td><%= dataHander[i].SoLuong %></td>
+                            <td><%= dataHander[i].ChonViTri %></td>
+                            <td><%= dataHander[i].NoiDung %></td>
+                            <td><%= dataHander[i].TrangThai %></td>
+                            <td>
+                              <div class="button" style="display: flex;justify-content: space-around;">
+                                  <!-- Nút Xóa -->
+                                <form action="/AdmindeleteOrder" method="post">
+                                  <input type="text" hidden value="<%= dataHander[i].ID %> " name="orderID"/>
+                                  <button type="submit">Xóa</button>
+                                </form>
+                                 <!-- Nút Cập Nhật -->
+                                 <form action="/AdminUpdateOrder" method="post">
+                                  <input type="text" hidden value="<%= dataHander[i].ID %> " name="AdminUpdate"/>
+                                  <button type="submit">Cập Nhật</button>
+                                </form>
+                                </div>
+                            </td>
+                          </tr>
+                       <% } %>
+                   </tbody>
+                  </table>
             </div>
         </div>
 
