@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shop</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="/css/homeAdmin.css">
+</head>
+<body>
+	<header>
+		<div id="header">
+			<p class="logo-header"><img src="/image/logo.png" alt=""></p>
+
+			<ul class="nav-items">
+				<li><a href="http://localhost:3000/home">Trang Chủ</a></li>
+				<li><a href="http://localhost:3000/handerOrder">Xử Lý Đơn Đặt Bàn</a></li>
+				<li><a href="#">Chỉnh Sửa Món Ăn</a></li>
+				<li><a href="http://localhost:3000/homeAdmin">Quản Lý</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div>
+		<h2 style="text-align: center; margin-top: 20px;">Danh Sách Thông Tin Lịch Đặt Bàn</h2>
+	</div>
+	<div class="w3-container" style="margin-top: 20px;">
+        <table class="w3-table-all w3-hoverable">
+          <thead>
+            <tr class="w3-light-grey">
+              <th>IDOrder</th>
+              <th>Họ Tên</th>
+              <th>Email</th>
+              <th>Số Điện Thoại</th>
+              <th>Ngày Đặt</th>
+              <th>Giờ</th>
+              <th>Số Lượng</th>
+              <th>Vị Trí</th>
+              <th>Nội Dung</th>
+              <th>Trạng Thái</th>
+              <th>Chức Năng</th>
+            </tr>
+          </thead>
+		     <tbody>
+            <% for(let i=0; i < dataInfo.length; i++) { %>
+                <tr>
+                  <td><%= dataInfo[i].ID %></td>
+                  <td><%= dataInfo[i].HoTen %></td>
+                  <td><%= dataInfo[i].Email %></td>
+                  <td><%= dataInfo[i].SoDienThoai %></td>
+                  <td><%= dataInfo[i].Ngay %></td>
+                  <td><%= dataInfo[i].Gio %></td>
+                  <td><%= dataInfo[i].SoLuong %></td>
+                  <td><%= dataInfo[i].ChonViTri %></td>
+                  <td><%= dataInfo[i].NoiDung %></td>
+                  <td><%= dataInfo[i].TrangThai %></td>
+                  <td>
+                    <div class="button">
+                      <form action="/AdmindeleteOrder" method="post">
+                        <input type="text" hidden value="<%= dataInfo[i].ID %> " name="orderID"/>
+                        <button type="submit">Xóa</button>
+                      </form>
+                      </div>
+                  </td>
+                </tr>
+             <% } %>
+         </tbody>
+        </table>
+      </div>
+
+      
+</body>
+</html>

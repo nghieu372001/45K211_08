@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 2000px;
+}
+#header{
+    width: auto;
+    height: 130px;
+    background-color: #056839;
+    position: sticky;
+    top: 10px;
+    z-index: 2;
+}
+
+#header .logo-header{
+    width: auto;
+    height: 80px;
+    text-align: center;
+
+}
+
+#header .nav-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+#header .nav-items li{
+    display:inline-block;
+    padding: 0 50px;
+    border-right: 2px solid black;
+}
+
+#header .nav-items li:first-child{
+    border-left: 2px solid black;
+}
+
+#header .nav-items li a{
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration:none;
+    color:yellow;
+}

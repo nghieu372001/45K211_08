@@ -1,61 +1,3 @@
-/*==================*/
-/*= RESET CSS ======*/
-/*==================*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-	font-family: Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a {
-	text-decoration: none;
-}
-
-
-/*==================*/
-/*= SHOP CSS  ======*/
-/*==================*/
-
-/*===== HEADER =====*/
-
 *{
     margin: 0;
     padding: 0;
@@ -65,8 +7,8 @@ a {
     width: auto;
     height: 130px;
     background-color: #056839;
-    position: sticky;
-    top: 0px;
+    /* position: sticky;
+    top: 0px; */
     z-index: 1;
 }
 
@@ -100,155 +42,12 @@ a {
     text-decoration:none;
     color:yellow;
 }
+.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
+.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
+/* hover table */
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
 
-.main-nav ul li {
-	float: left;
-	margin-right: 110px;
-}
-
-.main-nav ul li a {
-	color: yellow;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-	color: grey;
-}
-
-.fix {
-	clear: both;
-}
-
-/*===== MAIN =====*/
-
-.page-main {
-	height: 650px;
-	width: 100%;
-}
-
-.page-main .main-function {
-	width: 20%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	background: #F0E68C;
-	float: left;
-}
-
-.function {
-	background: white;
-	color: black;
-	text-transform: uppercase;
-	padding: 10px 20px;
-	border: 1px solid orange;
-	border-radius: 50px;	
-	font-size: 20px;
-	transition: all 0.5s ease;
-	padding:20px;
-}
-
-.function:hover {
-	background: #fff;
-	color: #c00;	
-	border: none;
-}
-
-.page-main .main-function a {
-	margin-top: 70px;
-	margin-left: 25px;
-	margin-right: 25px;
-}
-
-.page-main .main-function .f1::after {
-	content: 'Trang chủ';
-	padding-left: 20px;
-}
-
-.page-main .main-function .f2::after {
-	content: 'Xử lý đơn đặt bàn online';
-	padding-left: 20px;
-}
-
-.page-main .main-function .f3::after {
-	content: 'Xem thông tin lịch đặt bàn';
-	padding-left: 20px;
-}
-
-.page-main .main-function .f4::after {
-	content: 'Chỉnh sửa món ăn';
-	padding-left: 20px;
-}
-
-.page-main .main-info {
-	width: auto;
-	height: 100%;
-	background: #90EE90;
-	margin-left: 270px;
-}
-
-.page-main .main-info .user {
-	width: 90%;
-	height: 65%;
-	display: flex;
-}
-
-.page-main .main-info .user .user1{
-	width: 320px;
-	height: 300px;
-	background: white;
-	margin-left: 100px;
-	margin-top: 70px;
-}
-
-.page-main .main-info .user .user2{
-	width: 320px;
-	height: 300px;
-	background: white;
-	margin-left: 200px;
-	margin-top: 70px;
-}
-
-.page-main .main-info .user p{
-	font-size: 24px;
-	margin: 40px 30px;
-}
-
-.page-main .main-info .text {
-	font-size: 30px;
-	text-align: center;
-	color: red;
-	font-weight: bold;
-	margin-top: 20px;
-}
-
-.page-main .main-info .contact div{
-	float: left;
-	margin-left: 165px;
-	margin-top: 20px;
-}
-
-.page-main .main-info .contact div a{
-	font-size: 24px;
-	color: black;
-}
-
-.page-main .main-info .contact div p{
-	font-size: 24px;
-	color: black;
-	font-weight: bold;
-	margin-top: 12px;
-}
-
-.contact{
-	text-align: center;
-}
-
-.Underline{
-    margin-top: 20px;
-    width: 50%;
-    height: 1.5px;
-    margin-left: 340px;
-    text-align: center;
-    background-color: black;
-}
