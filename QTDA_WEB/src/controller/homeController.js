@@ -17,8 +17,9 @@ let searchOrder=async(req,res) => {
     // const [rows, fields] = await pool.execute('SELECT * FROM tableorder');
     // // return  res.render('searchOrder.ejs',{dataSearch:rows});
     let {SoDienThoaiTK}=req.body;
-    const [rows, fields] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
+    const [rows] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
     return  res.render('searchOrder.ejs',{dataSearch:rows});
+
 }
 
 
@@ -26,8 +27,6 @@ let deleteOrder=async (req,res) => {
     let orderID=req.body.orderID;
     await pool.execute('delete from tableorder where ID = ? ',[orderID]);
     return res.redirect('/monitor');
-    
-    
 }
 
 let editOrder =async (req,res) => {
@@ -46,6 +45,29 @@ let updateOrder=async (req,res) => {
     return res.redirect('/monitor');
 }
 
+
+let homeAdmin = async (req,res)=>{
+    const [rows_homeAdmin, fields] = await pool.execute('SELECT * FROM tableorder where TrangThai =\'Đã Xác Nhận\'');
+    return  res.render('homeAdmin.ejs',{dataInfo:rows_homeAdmin})
+} 
+
+let AdmindeleteOrder=async (req,res) => {
+    let orderID=req.body.orderID;
+    await pool.execute('delete from tableorder where ID = ? ',[orderID]);
+    return res.redirect('/homeAdmin');
+}
+
+let handerOrder = async (req,res)=>{
+    const [rows_handerOrder, fields] = await pool.execute('SELECT * FROM tableorder where TrangThai =\'Đang Chờ Xác Nhận\'');
+    return  res.render('handerOrder.ejs',{dataHander:rows_handerOrder})
+} 
+
+let AdminUpdateOrder=async (req,res) => {
+    let AdminUpdate=req.body.AdminUpdate;
+    await pool.execute('update tableorder set TrangThai=\'Đã Xác Nhận\' where ID = ? ',[AdminUpdate]);
+    return res.redirect('/handerOrder');
+}
+
 module.exports={
-    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder
+    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,homeAdmin,handerOrder,AdmindeleteOrder,AdminUpdateOrder
 }

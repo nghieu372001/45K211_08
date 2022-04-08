@@ -18,7 +18,10 @@ const initWebRoute=(app)=>{
         router.get('/editOrder/:idOrder',homeController.editOrder);
         router.post('/updateOrder',homeController.updateOrder);
         router.post('/searchOrder',homeController.searchOrder);
-
+        router.get('/handerOrder', homeController.handerOrder);
+        router.get('/homeAdmin', homeController.homeAdmin);
+        router.post('/AdmindeleteOrder',homeController.AdmindeleteOrder);
+        router.post('/AdminUpdateOrder',homeController.AdminUpdateOrder);
         return app.use('/',router);
 }
 

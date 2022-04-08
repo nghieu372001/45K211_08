@@ -9,7 +9,6 @@
     <title>Booking</title>
 </head>
 <body>
-
     <div id="header">
         <p class="logo-header"><img src="/image/logo.png" alt=""></p>
         <ul class="nav-items">
@@ -17,7 +16,7 @@
             <li><a href="http://localhost:3000/menu">Menu</a></li>
             <li><a href="http://localhost:3000/booking">Booking</a></li>
             <li><a href="http://localhost:3000/monitor">Theo dõi lịch đặt</a></li>
-            <li><a href="http://localhost:3000/Admin">Quản Lý</a></li>
+            <li><a href="http://localhost:3000/homeAdmin">Quản Lý</a></li>
         </ul>
     </div>
      
@@ -48,7 +47,7 @@
     
         <div class="grid__item w-40 ">
             <select id="ContactFormCoso" name="ChonViTri" required>
-                <option value="0">Chọn vị trí *</option>
+                <option value="Chưa Chọn Vị Trí">Chọn vị trí *</option>
                 <option  value="Bàn 1">Bàn 1</option>
                 <option  value="Bàn 2">Bàn 2</option>
                 <option  value="Bàn 3">Bàn 3</option>
@@ -80,7 +79,7 @@
         </div>
         <div class="grid__item w-40 ">
             <select id="ContactFormTime" name="Gio" required>
-                <option value="0">Chọn giờ *</option>
+                <option value="Chưa Chọn Giờ">Chọn giờ *</option>
                 <option name="time" value="08h00">08h00</option>
                 <option name="time" value="08h30">08h30</option>
                 <option name="time" value="09h00">09h00</option>
@@ -108,7 +107,7 @@
             <textarea rows="10" id="ContactFormMessage" class="input-full" name="NoiDung" required placeholder="Món ăn-Số lượng(Nếu không đặt món trước quý khách hãy nhập không) *"></textarea>
         </div>
     
-        <div class="grid__item large--one-half medium--one-whole small--one-whole" style="margin-left: 100px; " required>
+        <div class="grid__item large--one-half medium--one-whole small--one-whole" style="margin-left: 100px; ">
             <button type="submit">Đặt bàn</button>
         </div>
     </form>

@@ -2,14 +2,13 @@
     margin: 0;
     padding: 0;
 }
-
 #header{
     width: auto;
     height: 130px;
     background-color: #056839;
-    /* position: sticky;
-    top: 0px; */
-    z-index: 1;
+    position: sticky;
+    top: 10px;
+    z-index: 2;
 }
 
 #header .logo-header{
@@ -42,6 +41,7 @@
     text-decoration:none;
     color:yellow;
 }
+
 .w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
 .w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
 .w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
@@ -50,4 +50,3 @@
 .w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
 /* hover table */
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
-
