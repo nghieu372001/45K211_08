@@ -81,7 +81,7 @@ input[Type=Text]
  
 input[Type=Email]
 {
-    width: 80%;
+    width: 81%;
     padding: 12px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -94,7 +94,7 @@ input[Type=Email]
  
 input[Type=Tel]
 {
-    width: 79%;
+    width: 80%;
     padding: 12px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -107,7 +107,7 @@ input[Type=Tel]
  
 input[Type=Date]
 {
-    width: 80%;
+    width: 81%;
     padding: 12px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
