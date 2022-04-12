@@ -54,7 +54,7 @@ let homeAdmin = async (req,res)=>{
 let AdmindeleteOrder=async (req,res) => {
     let orderID=req.body.orderID;
     await pool.execute('delete from tableorder where ID = ? ',[orderID]);
-    return res.redirect('/homeAdmin');
+    return res.redirect('/handerOrder');
 }
 
 let handerOrder = async (req,res)=>{
