@@ -41,43 +41,20 @@
         <li><a href="">LẨU</a></li>
         <li><a href="">CHIÊN</a></li>
     </ul>
-
-    <div class="form-horizontal-text-right">
-      <label for ="Sắp xếp">Sắp xếp</label>
-      <select name="SortBy" id="SortBy">
-          <option value="best-selling">Sản phẩm bán chạy</option>
-          <option value="title-ascending">Theo chữ cái từ A-Z</option>
-          <option value="title-descending">Theo chữ cái từ Z-A</option>
-          <option value="price-ascending">Giá từ thấp tới cao</option>
-          <option value="price-descending">Giá từ cao tới thấp</option>
-          <option value="created-ascending">Mới nhất</option>
-          <option value="created-desscending">Cũ nhất</option>
-      </select>
-   </div>
   </div>
 
   <hr class="Underline">
   <!---->
+  <div style="text-align: center;"><h1>Thực Đơn Nhà Hàng</h1></div>
   <div id="body-menu">
-      <ul class="Column-Menu-1">
-          <li><img src="/image/menu1.jpg" alt=""><p>CHÁO ẾCH..........105,000đ</span></p>
-          <li><img src="/image/menu2.jpg" alt=""><p>GỎI ẾCH XANH..........140,000đ</p></li>
-          <li><img src="/image/menu3.jpg" alt=""><p>CHÁO ẾCH (LỚN)..........215,000đ</p></li>
-          <li><img src="/image/menu4.jpg" alt=""><p>GỎI ẾCH SIÊU CAY..........210,000đ</p></li>
-          <li><img src="/image/menu5.jpg" alt=""><p>NẤM RANG MUỐI ỚT..........60,000đ</p></li>
-          <li><img src="/image/menu6.png" alt=""><p>COMBO ĐOÀN VIÊN..........490,000đ</p></li>
-          <li><img src="/image/menu7.jpg" alt=""><p>LẨU ẾCH NẤU MĂNG..........290,000đ</p></li>
-      </ul>
-      <ul class="Column-Menu-2">
-          <li><img src="/image/menu8.jpg" alt=""><p>LẨU ẾCH CHUA NGỌT..........270,000đ</p></li>
-          <li><img src="/image/menu9.jpg" alt=""><p>ẾCH SỐT TRỨNG MUỐI..........180,000đ</p></li>
-          <li><img src="/image/menu10.jpg" alt=""><p>ẾCH XÀO CẢI XANH..........190,000đ</p></li>
-          <li><img src="/image/menu11.jpg" alt=""><p>ĐẬU BẮP RANG MUỐI ỚT..........80,000đ</p></li>
-          <li><img src="/image/menu12.jpg" alt=""><p>CHÁO TRẮNG THÊM..........22,000đ</p></li>
-          <li><img src="/image/menu13.png" alt=""><p>NHA ĐAM MẶT ONG..........25,000đ</p></li>
-          <li><img src="/image/menu14.png" alt=""><p>TRÀ ATISO..........25,000đ</p></li>
-      </ul>
+    <ul class="Column-Menu-1">
+        <% for(let i=0; i < dataMenu.length; i++) { %>
+        <li><img src="<%= dataMenu[i].PNG %>" alt=""><p><%= dataMenu[i].Name %>..........<%= dataMenu[i].Cost %></span></p></li>
+        <% } %>
+    </ul>
+
   </div>
+
 
   <hr class="Underline"> 
 

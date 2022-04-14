@@ -34,8 +34,8 @@ app.get('/menu', (req,res)=>{
 //     res.sendFile(__dirname+ '/homeAdmin.html');
 // })
 
-// app.get('/login', (req,res)=>{
-//     res.sendFile(__dirname+ '/login.html');
-// })
+app.get('/loginTest', (req,res)=>{
+    res.sendFile(__dirname+ '/login.html');
+})
 
 app.listen(port,()=> console.info(`Listening on port http://localhost:${port}/home`));

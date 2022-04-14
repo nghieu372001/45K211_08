@@ -31,6 +31,9 @@ const initWebRoute=(app)=>{
             res.render('infoAdmin.ejs');     // chạy ra cái file booking.ejs
         })
 
+        router.get('/menuTest', homeController.menuTest);
+
+
         return app.use('/',router);
 }
 

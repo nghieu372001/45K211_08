@@ -1,3 +1,4 @@
+import { addListener } from "nodemon";
 import pool from "../configs/connectDB";
 
 let getHomepage = async (req,res)=>{
@@ -77,8 +78,17 @@ let hanldeLogin = async (req,res)=>{
     {
         return  res.render('infoAdmin.ejs');;
     }
+    else{
+        return res.redirect('/login');
+    }     
 } 
 
+let menuTest=async (req,res) => {
+    const [rows_Menu, fields] = await pool.execute('SELECT * FROM menuFood');
+    return  res.render('menu.ejs',{dataMenu:rows_Menu})
+}
+
 module.exports={
-    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin
+    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
+    menuTest
 }
