@@ -23,35 +23,35 @@
      <img src="/image/imagebooking.PNG" alt="">
    </div >
 
-   <div class="collection-title">
-        <h1>Tất cả sản phẩm</h1>
-   </div>
-   <div class="breadcrumb-small">
-       <a href="index.html" title="Quay trở lại trang chủ">Trang chủ</a>
-       <span aria-hidden="true">/</span>
-       <span>Tất cả sản phẩm</span>
-   </div>
-
-   <hr class="Underline">
-
-   <div id="menu">
-    <ul class="items">
-        <li><a href="">CHÁO</a></li>
-        <li><a href="">GỎI</a></li>
-        <li><a href="">LẨU</a></li>
-        <li><a href="">CHIÊN</a></li>
-    </ul>
-  </div>
-
   <hr class="Underline">
   <!---->
   <div style="text-align: center;"><h1>Thực Đơn Nhà Hàng</h1></div>
   <div id="body-menu">
-    <ul class="Column-Menu-1">
+    <!-- <ul class="Column-Menu-1">
         <% for(let i=0; i < dataMenu.length; i++) { %>
         <li><img src="<%= dataMenu[i].PNG %>" alt=""><p><%= dataMenu[i].Name %>..........<%= dataMenu[i].Cost %></span></p></li>
         <% } %>
-    </ul>
+    </ul> -->
+    <table style="margin: 10px 50px 10px 100px">
+        <thead>
+            <tr>
+            <th>Tên Món Ăn</th>
+            <th>Hình Ảnh</th>
+            <th>Mô Tả Chi Tiết</th>
+            <th>Giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < dataMenu.length; i++) { %>   
+            <tr>
+                <td width=300px><%= dataMenu[i].Name %></td>
+                <td height=150px width=200px><img height=150px width=200px src="<%=dataMenu[i].PNG %>" alt=""></td>
+                <td><%= dataMenu[i].Detail %></td>
+                <td width=300px><%= dataMenu[i].Cost %></td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
 
   </div>
 

@@ -83,12 +83,12 @@ let hanldeLogin = async (req,res)=>{
     }     
 } 
 
-let menuTest=async (req,res) => {
+let menu=async (req,res) => {
     const [rows_Menu, fields] = await pool.execute('SELECT * FROM menuFood');
     return  res.render('menu.ejs',{dataMenu:rows_Menu})
 }
 
 module.exports={
     createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
-    menuTest
+    menu
 }

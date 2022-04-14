@@ -26,9 +26,9 @@ app.get('/home', (req,res)=>{
     res.sendFile(__dirname+ '/index.html');
 })
 
-app.get('/menu', (req,res)=>{
-    res.sendFile(__dirname+ '/menu.html');
-})
+// app.get('/menu', (req,res)=>{
+//     res.sendFile(__dirname+ '/menu.html');
+// })
 
 // app.get('/Admin', (req,res)=>{
 //     res.sendFile(__dirname+ '/homeAdmin.html');
