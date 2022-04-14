@@ -46,9 +46,9 @@ let updateOrder=async (req,res) => {
 }
 
 
-let homeAdmin = async (req,res)=>{
+let listOrder = async (req,res)=>{
     const [rows_homeAdmin, fields] = await pool.execute('SELECT * FROM tableorder where TrangThai =\'Đã Xác Nhận\'');
-    return  res.render('homeAdmin.ejs',{dataInfo:rows_homeAdmin})
+    return  res.render('listOrder.ejs',{dataInfo:rows_homeAdmin})
 } 
 
 let AdmindeleteOrder=async (req,res) => {
@@ -68,6 +68,17 @@ let AdminUpdateOrder=async (req,res) => {
     return res.redirect('/handerOrder');
 }
 
+
+let hanldeLogin = async (req,res)=>{
+    let {user,psw}=req.body;
+    console.log("user: ",user);
+    console.log("password: ",psw);
+    if(user == "QuanLy" && psw == "12345")
+    {
+        return  res.render('infoAdmin.ejs');;
+    }
+} 
+
 module.exports={
-    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,homeAdmin,handerOrder,AdmindeleteOrder,AdminUpdateOrder
+    createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin
 }

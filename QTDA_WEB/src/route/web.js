@@ -19,9 +19,18 @@ const initWebRoute=(app)=>{
         router.post('/updateOrder',homeController.updateOrder);
         router.post('/searchOrder',homeController.searchOrder);
         router.get('/handerOrder', homeController.handerOrder);
-        router.get('/homeAdmin', homeController.homeAdmin);
+        router.get('/listOrder', homeController.listOrder);
         router.post('/AdmindeleteOrder',homeController.AdmindeleteOrder);
         router.post('/AdminUpdateOrder',homeController.AdminUpdateOrder);
+        router.post('/hanldeLogin', homeController.hanldeLogin);
+        router.get('/login', (req,res)=>{
+            res.render('login.ejs');     // chạy ra cái file booking.ejs
+        })
+
+        router.get('/infoAdmin', (req,res)=>{
+            res.render('infoAdmin.ejs');     // chạy ra cái file booking.ejs
+        })
+
         return app.use('/',router);
 }
 
