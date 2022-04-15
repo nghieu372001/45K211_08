@@ -24,10 +24,10 @@
 
         <form action="/adminUpdateMenu" method="post">
             <div class="content-addFood">
-                <div><p style="float:left">Tên Món Ăn</p> <input name="Name" style="margin-left:50px;width:700px" type="text" value="<%= dataMenu.Name %>" ></div>
-                <div><p style="float:left">Giá Món Ăn</p> <input name="Cost" style="margin-left:52px;width:700px" type="text" value="<%= dataMenu.Cost %>"></div>
-                <div><p style="float:left">Hình Ảnh</p> <input name="PNG" style="margin-left:69px;width:700px" type="text" value="<%= dataMenu.PNG %>"></div>
-                <div><p style="float:left">Chi Tiết Món Ăn</p> <input name="Detail" style="margin-left:23px;width:700px" type="text" value="<%= dataMenu.Detail %>"></div>
+                <div><p style="float:left">Tên Món Ăn</p> <input name="Name" style="margin-left:50px;width:700px" type="text" value="<%= dataMenu.Name %>" placeholder="Nhập Tên Món Ăn"></div>
+                <div><p style="float:left">Giá Món Ăn</p> <input name="Cost" style="margin-left:52px;width:700px" type="text" value="<%= dataMenu.Cost %>" placeholder="Nhập Giá Món Ăn"></div>
+                <div><p style="float:left">Hình Ảnh</p> <input name="PNG" style="margin-left:69px;width:700px" type="text" value="<%= dataMenu.PNG %>" placeholder="Nhập Link Hình Ảnh"></div>
+                <div><p style="float:left">Chi Tiết Món Ăn</p> <input name="Detail" style="margin-left:23px;width:700px" type="text" value="<%= dataMenu.Detail %>" placeholder="Nhập Mô Tả Món Ăn"></div>
             </div>
 
             <input type="text" value="<%= dataMenu.ID %>" name="ID" hidden >

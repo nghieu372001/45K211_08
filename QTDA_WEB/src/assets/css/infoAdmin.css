@@ -42,3 +42,36 @@
     text-decoration:none;
     color:yellow;
 }
+
+#contact{
+    margin: 20px 0;
+    
+}
+
+#contact .icon-contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+#contact .contact-text{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#contact .icon{
+    height: 50px;
+    width: 50px;
+}
+.Underline{
+    margin-top: 20px;
+    width: 50%;
+    height: 1.5px;
+    margin-left: 425px;
+    text-align: center;
+    background-color: black;
+}
