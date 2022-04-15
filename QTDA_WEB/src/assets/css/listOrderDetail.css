@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+#header{
+    width: auto;
+    height: 130px;
+    background-color: #056839;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+ 
+#header .logo-header{
+    width: auto;
+    height: 80px;
+    text-align: center;
+ 
+}
+ 
+#header .nav-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   
+}
+ 
+#header .nav-items li{
+    display:inline-block;
+    padding: 0 50px;
+    border-right: 2px solid black;
+}
+ 
+#header .nav-items li:first-child{
+    border-left: 2px solid black;
+}
+ 
+#header .nav-items li a{
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration:none;
+    color:yellow;
+}
+ 
+ 
+.item{
+    margin:20px 0;
+    text-align: center;
+    border: none;
+}
+ 
+.item .icon a{
+    margin:0 80px;
+    border: none;
+}
+ 
+ 
+h2
+{
+    text-align: center;
+    font-size: 180%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+ 
+input[Type=Text]
+{
+    width: 88%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    box-sizing: border-box;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    color: black;
+ 
+}
+ 
+input[Type=Email]
+{
+    width: 81%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    color: black;
+}
+ 
+input[Type=Tel]
+{
+    width: 80%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    color: black;
+}
+ 
+input[Type=Date]
+{
+    width: 81%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    color: black;
+}
+ 
+select
+{
+    width: 87%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    color: black;
+}
+ 
+textarea
+{
+    width: 72%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 140px;
+    margin-left: 140px;
+    background-color: rgb(199, 199, 188);
+    border: none;
+    resize: none;
+    color: black;
+}
+ 
+button
+{
+    width: 15%;
+    height: 40px;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 120px;
+    margin-left: 500px;
+    background-color: #056839;
+    color: black;
+}
+ 
+ .w-30, .w-33, .w-40, .w-50, .w-60, .w-70, .w-75, .w-80, .w-100 {
+    float: left;
+}
+.w-100 {
+    width: 100%;
+}
+@media (min-width: 415px) {
+ 
+    .w-30 {width: 30%;}
+    .w-33 {width: 33.33%;}
+    .w-35 {width: 35%;}
+    .w-40 {width: 40%;}
+    .w-50 {width: 50%;}
+    .w-60 {width: 60%;}
+    .w-70 {width: 70%;}
+    .w-75 {width: 75%;}
+    .w-80 {width: 80%;}
+    .w-85 {width: 85%;}
+    .w-90 {width: 90%;}
+}
+@media (min-width: 321px) and (max-width: 414px) {
+    .w-16 {width: 25%;}
+    .w-20, .w-25, .w-30, .w-33, .w-35, .w-40 {width: 50%;}
+}
+@media (max-width: 414px) {
+    .w-50, .w-60, .w-70, .w-75, .w-80 {width: 100%;}
+}
+@media (max-width: 320px) {
+    .w-16, .w-20, .w-25 {width: 50%;}
+    .w-30, .w-33, .w-35, .w-40 {width: 100%;}
+}
+ 
+#contact{
+    margin: 20px 0;
+   
+}
+ 
+#contact .icon-contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 70px;
+}
+ 
+#contact .contact-text{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+ 
+#contact .icon{
+    height: 50px;
+    width: 50px;
+}
