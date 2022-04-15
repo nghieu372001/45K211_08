@@ -31,7 +31,7 @@ let deleteOrder=async (req,res) => {
 }
 
 let editOrder =async (req,res) => {
-    let orderID=req.params.idOrder;  //idOrder = /:idOrder bên web
+    let orderID=req.params.idOrder;  //idOrder = /:idOrder bên web.js
     let [Order]=await pool.execute('select * from tableorder where ID = ?',[orderID]); //orderID là biến let
     return res.render('updateOrder.ejs',{dataOrder:Order[0]});
 
@@ -101,8 +101,29 @@ let adminAddMenu=async (req,res) => {    // Chuc nanng them mon an (Admin)
     return res.redirect('/handleMenu');
 };
 
+let adminEditMenu =async (req,res) => {
+    let IDMenu=req.params.idMenu;  //idMenu = /:idMenu bên web.js
+    let [Menu]=await pool.execute('select * from menuFood where ID = ?',[IDMenu]); //idMenu là biến let
+    return res.render('updateMenu.ejs',{dataMenu:Menu[0]});
+
+    // return res.send(`hello user ${req.params.idOrder}`);
+}
+
+let adminUpdateMenu=async (req,res) => {
+    let {Name,Cost,PNG,Detail,ID}=req.body;
+    await pool.execute('update menuFood set Name=?, Cost=?,PNG=?,Detail=? where ID =?',[Name,Cost,PNG,Detail,ID]);
+    console.log('check',req.body);
+    return res.redirect('/handleMenu');
+}
+
+let adminDeleteMenu=async (req,res) => {
+    let menuFoodID=req.body.menuFoodID; //menuFoodID giống trong phần xóa của hanldeMenu.ejs
+    await pool.execute('delete from menuFood where ID = ?',[menuFoodID]);
+    return res.redirect('/handleMenu');
+}
+
 
 module.exports={
     createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
-    menu,handleMenu,adminAddMenu
+    menu,handleMenu,adminAddMenu,adminEditMenu,adminUpdateMenu,adminDeleteMenu
 }

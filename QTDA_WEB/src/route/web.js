@@ -36,6 +36,10 @@ const initWebRoute=(app)=>{
 
         router.post('/adminAddMenu',homeController.adminAddMenu);
 
+        router.get('/adminEditMenu/:idMenu',homeController.adminEditMenu);
+        router.post('/adminUpdateMenu',homeController.adminUpdateMenu);
+        router.post('/adminDeleteMenu',homeController.adminDeleteMenu);
+
 
         return app.use('/',router);
 }

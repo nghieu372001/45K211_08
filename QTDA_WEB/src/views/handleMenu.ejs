@@ -63,14 +63,14 @@
                 <td width=300px><%= dataMenu[i].Cost %></td>
                 <td>
                     <div>
-                        <form style="margin-bottom: 20px;" action="/AdmindeleteMenu" method="post">
-                            <input type="text" hidden value="<%= dataMenu[i].ID %> " name="MenuID"/>
-                            <button style="padding: 0px 16px;" type="submit">Xóa</button>
-                          </form>
-                           <!-- Nút Cập Nhật -->
-                           <form action="/AdminUpdateMenu" method="post">
-                            <input type="text" hidden value="<%= dataMenu[i].ID %> " name="UpdateMenu"/>
+                        <!-- Nút Cập Nhật -->
+                        <form action="/adminEditMenu/<%= dataMenu[i].ID %>" method="get">
                             <button type="submit">Cập Nhật</button>
+                          </form>
+                        <!-- Nút Xóa -->
+                        <form style="margin-top: 20px;" action="/adminDeleteMenu" method="post">
+                            <input type="text" hidden value="<%= dataMenu[i].ID %> " name="menuFoodID"/>
+                            <button style="padding: 0px 16px;" type="submit">Xóa</button>
                           </form>
                     </div>
                 </td>

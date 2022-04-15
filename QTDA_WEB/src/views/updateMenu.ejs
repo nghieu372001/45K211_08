@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/handleMenu.css">
+    <title>Menu</title>
+</head>
+<body>
+    <div id="header">
+        <p class="logo-header"><img src="/image/logo.png" alt=""></p>
+        <ul class="nav-items">
+            <li><a href="http://localhost:3000/infoAdmin">Trang Chủ Quản Lý</a></li>
+            <li><a href="http://localhost:3000/listOrder">Danh Sách Đặt Bàn</a></li>
+            <li><a href="http://localhost:3000/handerOrder">Xử Lý Đơn Đặt Bàn</a></li>
+            <li><a href="http://localhost:3000/handleMenu">Chỉnh Sửa Món Ăn</a></li>
+            <li><a href="http://localhost:3000/home">Trang Chủ</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="addFood">
+        <h2 style="text-align:center; margin-bottom: 10px;">Thêm Món Ăn</h2>
+
+        <form action="/adminUpdateMenu" method="post">
+            <div class="content-addFood">
+                <div><p style="float:left">Tên Món Ăn</p> <input name="Name" style="margin-left:50px;width:700px" type="text" value="<%= dataMenu.Name %>" ></div>
+                <div><p style="float:left">Giá Món Ăn</p> <input name="Cost" style="margin-left:52px;width:700px" type="text" value="<%= dataMenu.Cost %>"></div>
+                <div><p style="float:left">Hình Ảnh</p> <input name="PNG" style="margin-left:69px;width:700px" type="text" value="<%= dataMenu.PNG %>"></div>
+                <div><p style="float:left">Chi Tiết Món Ăn</p> <input name="Detail" style="margin-left:23px;width:700px" type="text" value="<%= dataMenu.Detail %>"></div>
+            </div>
+
+            <input type="text" value="<%= dataMenu.ID %>" name="ID" hidden >
+            <div style="text-align:center;"><button style="padding: 5px;border-radius: 30px;" type="submit">Cập Nhật</button></div>
+        </form>
+
+    </div>
+</body>
+</html>
