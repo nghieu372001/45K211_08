@@ -38,7 +38,7 @@
               <th>Giờ</th>
               <th>Số Lượng</th>
               <th>Vị Trí</th>
-              <th>Nội Dung</th>
+              <!-- <th>Nội Dung</th> -->
               <th>Trạng Thái</th>
               <th>Chức Năng</th>
             </tr>
@@ -54,17 +54,17 @@
                   <td><%= dataSearch[i].Gio %></td>
                   <td><%= dataSearch[i].SoLuong %></td>
                   <td><%= dataSearch[i].ChonViTri %></td>
-                  <td style="width:500px"><%= dataSearch[i].NoiDung %></td>
+                  <!-- <td style="width:500px"><%= dataSearch[i].NoiDung %></td> -->
                   <td><%= dataSearch[i].TrangThai %></td>
                   <td>
                     <div class="button">
                       <form action="/editOrder/<%= dataSearch[i].ID %>" method="get">
-                        <button style="padding:0 9px" type="submit">Cập Nhật</button>
+                        <button style="padding:0 24px" type="submit">Xem Chi Tiết</button>
                       </form>
 
                       <form action="/deleteOrder" method="post">
                         <input type="text" hidden value="<%= dataSearch[i].ID %> " name="orderID"/>
-                        <button style="padding: 0 25px; margin-top: 10px;" type="submit">Xóa</button>
+                        <button style="padding: 0 35px; margin-top: 10px;" type="submit">Hủy Đơn</button>
                       </form>
                     </div>
                     </td>

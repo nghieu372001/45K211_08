@@ -36,7 +36,7 @@
               <th>Giờ</th>
               <th>Số Lượng</th>
               <th>Vị Trí</th>
-              <th>Nội Dung</th>
+              <!-- <th>Nội Dung</th> -->
               <th>Trạng Thái</th>
               <th>Chức Năng</th>
             </tr>
@@ -52,13 +52,17 @@
                   <td><%= dataInfo[i].Gio %></td>
                   <td><%= dataInfo[i].SoLuong %></td>
                   <td><%= dataInfo[i].ChonViTri %></td>
-                  <td style="width:500px"><%= dataInfo[i].NoiDung %></td>
+                  <!-- <td style="width:500px"><%= dataInfo[i].NoiDung %></td> -->
                   <td><%= dataInfo[i].TrangThai %></td>
                   <td>
                     <div class="button">
+                      <form action="/listOrderDetail/<%= dataInfo[i].ID %>" method="get">
+                        <button style="padding:0 9px" type="submit">Xem Chi Tiết</button>
+                      </form>
+
                       <form action="/AdmindeleteOrder" method="post">
                         <input type="text" hidden value="<%= dataInfo[i].ID %> " name="orderID"/>
-                        <button type="submit" style="padding:0 30px;">Xóa</button>
+                        <button type="submit" style="padding:0 35px;margin-top: 5px;">Xóa</button>
                       </form>
                       </div>
                   </td>

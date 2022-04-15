@@ -18,7 +18,7 @@ let searchOrder=async(req,res) => {
     // const [rows, fields] = await pool.execute('SELECT * FROM tableorder');
     // // return  res.render('searchOrder.ejs',{dataSearch:rows});
     let {SoDienThoaiTK}=req.body;
-    const [rows] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
+    const [rows] = await pool.execute('SELECT ID,HoTen,Email,SoDienThoai,SoLuong,ChonViTri,Ngay,Gio,TrangThai FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
     return  res.render('searchOrder.ejs',{dataSearch:rows});
 }
 
@@ -47,7 +47,7 @@ let updateOrder=async (req,res) => {
 
 
 let listOrder = async (req,res)=>{
-    const [rows_homeAdmin, fields] = await pool.execute('SELECT * FROM tableorder where TrangThai =\'Đã Xác Nhận\'');
+    const [rows_homeAdmin, fields] = await pool.execute('SELECT ID,HoTen,Email,SoDienThoai,SoLuong,ChonViTri,Ngay,Gio,TrangThai FROM tableorder where TrangThai =\'Đã Xác Nhận\'');
     return  res.render('listOrder.ejs',{dataInfo:rows_homeAdmin})
 } 
 
@@ -57,14 +57,14 @@ let AdmindeleteOrder=async (req,res) => {
     return res.redirect('/listOrder');
 }
 
-let AdmindeleteOrder2=async (req,res) => {
+let AdmindeleteHanderOrder=async (req,res) => {
     let orderID=req.body.orderID;
     await pool.execute('delete from tableorder where ID = ? ',[orderID]);
     return res.redirect('/handerOrder');
 }
 
 let handerOrder = async (req,res)=>{
-    const [rows_handerOrder, fields] = await pool.execute('SELECT * FROM tableorder where TrangThai =\'Đang Chờ Xác Nhận\'');
+    const [rows_handerOrder, fields] = await pool.execute('SELECT ID,HoTen,Email,SoDienThoai,SoLuong,ChonViTri,Ngay,Gio,TrangThai  FROM tableorder where TrangThai =\'Đang Chờ Xác Nhận\'');
     return  res.render('handerOrder.ejs',{dataHander:rows_handerOrder})
 } 
 
@@ -110,8 +110,6 @@ let adminEditMenu =async (req,res) => {
     let IDMenu=req.params.idMenu;  //idMenu = /:idMenu bên web.js
     let [Menu]=await pool.execute('select * from menuFood where ID = ?',[IDMenu]); //idMenu là biến let
     return res.render('updateMenu.ejs',{dataMenu:Menu[0]});
-
-    // return res.send(`hello user ${req.params.idOrder}`);
 }
 
 let adminUpdateMenu=async (req,res) => {
@@ -127,8 +125,13 @@ let adminDeleteMenu=async (req,res) => {
     return res.redirect('/handleMenu');
 }
 
+let listOrderDetail =async (req,res) => {
+    let idListOrder=req.params.idListOrder;  //idListOrder = /:idMenu bên web.js
+    let [ListOrder]=await pool.execute('select * from tableorder where ID = ?',[idListOrder]); //idMenu là biến let
+    return res.render('listOrderDetail.ejs',{dataInfo:ListOrder[0]});
+}
 
 module.exports={
     createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
-    menu,handleMenu,adminAddMenu,adminEditMenu,adminUpdateMenu,adminDeleteMenu,AdmindeleteOrder2
+    menu,handleMenu,adminAddMenu,adminEditMenu,adminUpdateMenu,adminDeleteMenu,AdmindeleteHanderOrder,listOrderDetail
 }
