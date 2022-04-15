@@ -21,6 +21,7 @@ const initWebRoute=(app)=>{
         router.get('/handerOrder', homeController.handerOrder);
         router.get('/listOrder', homeController.listOrder);
         router.post('/AdmindeleteOrder',homeController.AdmindeleteOrder);
+        router.post('/AdmindeleteOrder2',homeController.AdmindeleteOrder2);
         router.post('/AdminUpdateOrder',homeController.AdminUpdateOrder);
         router.post('/hanldeLogin', homeController.hanldeLogin);
         router.get('/login', (req,res)=>{

@@ -20,7 +20,6 @@ let searchOrder=async(req,res) => {
     let {SoDienThoaiTK}=req.body;
     const [rows] = await pool.execute('SELECT * FROM tableorder where SoDienThoai = ?',[SoDienThoaiTK]);
     return  res.render('searchOrder.ejs',{dataSearch:rows});
-
 }
 
 
@@ -53,6 +52,12 @@ let listOrder = async (req,res)=>{
 } 
 
 let AdmindeleteOrder=async (req,res) => {
+    let orderID=req.body.orderID;
+    await pool.execute('delete from tableorder where ID = ? ',[orderID]);
+    return res.redirect('/listOrder');
+}
+
+let AdmindeleteOrder2=async (req,res) => {
     let orderID=req.body.orderID;
     await pool.execute('delete from tableorder where ID = ? ',[orderID]);
     return res.redirect('/handerOrder');
@@ -125,5 +130,5 @@ let adminDeleteMenu=async (req,res) => {
 
 module.exports={
     createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
-    menu,handleMenu,adminAddMenu,adminEditMenu,adminUpdateMenu,adminDeleteMenu
+    menu,handleMenu,adminAddMenu,adminEditMenu,adminUpdateMenu,adminDeleteMenu,AdmindeleteOrder2
 }
