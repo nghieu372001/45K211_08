@@ -32,6 +32,9 @@ const initWebRoute=(app)=>{
         })
 
         router.get('/menu', homeController.menu);
+        router.get('/handleMenu', homeController.handleMenu);
+
+        router.post('/adminAddMenu',homeController.adminAddMenu);
 
 
         return app.use('/',router);

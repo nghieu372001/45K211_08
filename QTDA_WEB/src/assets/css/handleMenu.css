@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    width: auto;
+    height: 130px;
+    background-color: #056839;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+#header .logo-header{
+    width: auto;
+    height: 80px;
+    text-align: center;
+
+}
+
+#header .nav-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+
+#header .nav-items li{
+    display:inline-block;
+    padding: 0 50px;
+    border-right: 2px solid black;
+}
+
+#header .nav-items li:first-child{
+    border-left: 2px solid black;
+}
+
+#header .nav-items li a{
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration:none;
+    color:yellow;
+}
+
+#body-menu {
+ display: flex;
+ justify-content: space-between;
+}
+
+
+#body-menu ul li{
+    list-style: none;
+    display: flex;
+    margin: 20px 100px;
+
+}
+
+#body-menu ul li img{
+    width: 200px;
+    height: 200px;
+}
+
+#body-menu ul li p{
+margin-left: 10px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid #dddddd;
+  /*   text-align: left; */
+  /*   padding: 8px; */
+  }
+  
+  tr:nth-child(even) {
+    background-color:white;
+  }
+  
+  th,td{
+    text-align:center;
+  }
+
+
+  .addFood{
+      width: 1000px;
+      height: 200px;
+      border: 2px solid black;
+      margin-top: 30px;
+      margin-left: 17%;
+      border-radius: 30px;
+  }
+
+  .content-addFood{
+      margin-left: 70px;
+  }
+
+  .content-addFood div{
+      margin-bottom: 10px;
+  }
+
+  button:hover{
+      cursor: pointer;
+  }

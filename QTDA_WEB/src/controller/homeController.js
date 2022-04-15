@@ -88,7 +88,21 @@ let menu=async (req,res) => {
     return  res.render('menu.ejs',{dataMenu:rows_Menu})
 }
 
+
+let handleMenu=async (req,res) => {
+    const [rows_handleMenu, fields] = await pool.execute('SELECT * FROM menuFood');
+    return  res.render('handleMenu.ejs',{dataMenu:rows_handleMenu})
+}
+
+let adminAddMenu=async (req,res) => {    // Chuc nanng them mon an (Admin)
+    console.log('check req:', req.body);
+    let {Name,Cost,PNG,Detail}=req.body; // =( let HoTen= req.body.HoTen;) các biến trong let giống thuộc tính name trong các thẻ của file ejs
+    await pool.execute('Insert Into menuFood (Name,Cost,PNG,Detail) Values(?,?,?,?)',[Name,Cost,PNG,Detail]);
+    return res.redirect('/handleMenu');
+};
+
+
 module.exports={
     createNewOrder,getHomepage,updateOrder,searchOrder,editOrder,deleteOrder,listOrder,handerOrder,AdmindeleteOrder,AdminUpdateOrder,hanldeLogin,
-    menu
+    menu,handleMenu,adminAddMenu
 }
