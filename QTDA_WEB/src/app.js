@@ -1,7 +1,11 @@
-import express from "express";
-import configViewEngine from "./configs/viewEngine"; //Kết nối đên src/assets để dùng file css
-import initWebRoute from "./route/web";
+// import express from "express";
+// import configViewEngine from "./configs/viewEngine"; //Kết nối đên src/assets để dùng file css
+// import initWebRoute from "./route/web";
 
+
+var express=require('express');
+var configViewEngine=require('./configs/viewEngine');
+var  initWebRoute=require('./route/web');
 
 require('dotenv').config(); // sử dụng env
 

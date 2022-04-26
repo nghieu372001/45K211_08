@@ -1,5 +1,6 @@
 // get the client
-import mysql from "mysql2/promise";
+// import mysql from "mysql2/promise";
+var mysql=require('mysql2/promise');
 
 
 //create the connection to database
@@ -18,4 +19,6 @@ const pool = mysql.createPool({
     password: 'RdjGyOsS6Q'
   });
 
-export default pool;
+// export default pool;
+
+module.exports=pool;

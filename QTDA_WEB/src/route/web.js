@@ -1,5 +1,9 @@
-import express from "express";
-import homeController from "../controller/homeController";
+// import express from "express";
+var express=require('express');
+
+
+// import homeController from "../controller/homeController";
+var  homeController=require('../controller/homeController');
 
 
 let router=express.Router();
@@ -48,4 +52,5 @@ const initWebRoute=(app)=>{
 }
 
 
-export default initWebRoute;
+// export default initWebRoute;
+module.exports=initWebRoute

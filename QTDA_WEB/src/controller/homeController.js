@@ -1,5 +1,6 @@
-import { addListener } from "nodemon";
-import pool from "../configs/connectDB";
+// import { addListener } from "nodemon";
+// import pool from "../configs/connectDB";
+var pool=require('../configs/connectDB');
 
 let getHomepage = async (req,res)=>{
     // const [rows, fields] = await pool.execute('SELECT * FROM tableorder');
